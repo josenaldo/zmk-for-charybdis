@@ -29,10 +29,10 @@
 
         layer_1 {
             bindings = <
-&kp F1          &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &kp F7         &kp F8      &kp F9            &kp F10            &kp F11        &kp F12
-&kp CAPS        &none         &none         &bt BT_CLR    &bt BT_PRV    &bt BT_NXT      &none          &none       &kp UP            &none              &kp GRAVE      &kp EQUAL
-&kp LEFT_SHIFT  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none          &kp LEFT    &kp DOWN          &kp RIGHT          &kp CARET      &kp QUESTION
-&kp LCTRL       &none         &none         &none         &none         &none           &none          &none       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp PLUS
+&kp F1          &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &kp F7         &kp F8         &kp F9            &kp F10            &kp F11        &kp F12
+&kp CAPS        &none         &none         &bt BT_CLR    &bt BT_PRV    &bt BT_NXT      &kp HOME       &kp PAGE_UP    &kp UP            &none              &kp GRAVE      &kp EQUAL
+&kp LEFT_SHIFT  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp INSERT     &kp LEFT       &kp DOWN          &kp RIGHT          &kp CARET      &kp QUESTION
+&kp LCTRL       &none         &none         &none         &none         &none           &kp END        &kp PAGE_DOWN  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp PLUS
                                             &kp LEFT_ALT  &kp SPACE     &to 0           &kp RIGHT_ALT  &kp DELETE
                                                           &mkp MB1      &mkp MB2        &kp ENTER
             >;
