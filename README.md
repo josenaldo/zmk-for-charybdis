@@ -1,4 +1,4 @@
-# ZMK configuration for BastardKB Charybdis (4x6)
+# ZMK configuration for BastardKB Charybdis MK2 (4x6)
 
 ## Overview
 
