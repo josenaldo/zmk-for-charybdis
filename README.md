@@ -101,6 +101,67 @@ Charybdis halves use the nice!nano bootloader and accept UF2 files. Flash each h
     - Layer 1 includes BT_SEL 0..4, BT_NXT, BT_PRV, and BT_CLR. See ZMK Bluetooth
       docs: https://zmk.dev/docs/behaviors/bluetooth
 
+## Keyboard configuration and bilingual usage (EN + PT-BR)
+
+This configuration is designed to let you type comfortably in both English (US) and Brazilian
+Portuguese, approximating the ABNT2 standard while keeping an ergonomic, layer-based layout.
+
+Recommended OS keyboard layout
+
+- Set your operating system layout to “English (US) – International (with dead keys)”. This enables
+  native dead-key composition for accents and tilde, which closely matches ABNT2 behavior.
+    - Windows: English (United States) > US-International
+    - macOS: U.S. International – PC (or U.S. with dead keys via third-party if preferred)
+    - Linux: English (US) > International with dead keys (varies by distro/desktop)
+- You can also select “Portuguese (Brazil) – ABNT2”, but because the firmware assumes US legends and
+  uses layers for symbols, US-International generally provides a more consistent experience.
+
+Layer overview
+
+- Layer 0 (Base):
+    - Standard US QWERTY letters and numbers.
+    - Punctuation on the right hand includes: ; ' , . / and -
+    - Thumbs: Left Alt, Space, [to 1], Left GUI, Delete; plus trackball left/right click and Enter.
+- Layer 1 (Function/Symbols/BT/Nav):
+    - Function keys: F1–F12.
+    - Bluetooth: BT_SEL 0..4, BT_NXT, BT_PRV, BT_CLR (pairing/profile management).
+    - Navigation: Home, End, Insert, Page Up/Down, Arrow keys.
+    - Symbols consolidated on the right for easy reach: ` (grave/tilde), =, ^, ?, [ ], \, +.
+    - Right Alt is available (acts as AltGr for US-International composition).
+
+Typing PT-BR characters (US-International with dead keys)
+
+- Acute accents (á, é, í, ó, ú): ' then vowel. Example: ' + a → á
+- Grave accents (à, è, ì, ò, ù): ` then vowel. Example: ` + a → à
+- Circumflex (â, ê, ô): ^ then vowel. Example: ^ + a → â
+- Tilde (ã, õ): ~ then vowel. Example: ~ + a → ã, ~ + o → õ
+- Diaeresis (ä, ë, ï, ö, ü): " then vowel. Example: " + u → ü
+- Cedilla (ç, Ç): Right Alt (AltGr) + , → ç; Shift + AltGr + , → Ç
+    - Tip: On this keymap you can hold the Layer 1 key to access a dedicated Right Alt, or use your
+      physical Right Alt if present.
+
+ABNT2 approximation notes
+
+- There is no dedicated Ç key; use AltGr + , (and Shift for Ç), which matches common
+  US-International behavior.
+- Dead-key behavior for ´, `, ~, ^ is handled by the OS layout; this provides results similar to the
+  ABNT2 hardware keys for accents and tilde.
+- Brackets [ ], backslash \\, and plus + are grouped on Layer 1 at the right side, keeping symbol
+  entry efficient even without ABNT2 physical legends.
+- The question mark (?) is accessible via Shift + / on Layer 0 (standard US behavior) and also has a
+  dedicated key on Layer 1 for convenience.
+- Hyphen -, equals =, and plus + are all available (base or Layer 1), covering common PT-BR
+  punctuation needs.
+
+Tips
+
+- If pressing ' + a yields two characters instead of á, your OS layout is not set to
+  US-International with dead keys; update the OS layout as suggested above.
+- Some applications may override shortcuts using AltGr. If AltGr sequences fail, try using the Layer
+  1 Right Alt key or switch to another app to verify.
+- For reference on ZMK Bluetooth behavior and additional customization, see:
+  https://zmk.dev/docs/behaviors/bluetooth
+
 ## Troubleshooting
 
 - If a half does not show up as NICENANO when entering bootloader, try another USB cable/port or
